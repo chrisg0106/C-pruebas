@@ -75,4 +75,25 @@ int Lista::operator[](std::size_t ix){
    return valor->_valor;
 }
 
+bool Lista::tryGet(std::size_t ix, int& resultado){
+    Lista* valor = this;
+    for(std::size_t i = ix; i > 0; i--){
+        if(valor == nullptr){
+            return false;
+        }
+        valor = valor ->_resto;
+    }
 
+    return false;
+
+
+}
+void Lista::byValue(int valor , std::string st){//variable interna del metodo 
+    valor = 42;
+    st[0] = 'A';
+
+}
+void Lista::byReference(int& valor, std::string& st){//& sirve para decir que sirve para cambiar el valor especifico de la variable
+    valor = 42;
+    st[0] = 'A';
+}
