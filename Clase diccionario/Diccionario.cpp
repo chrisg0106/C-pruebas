@@ -1,4 +1,4 @@
-#include "Lista.hh"
+#include "Diccionario.hh"
 
 #include <iostream>
 #include <string>
@@ -29,7 +29,7 @@ _definiciones.push_back(definicion);
 
 void Diccionario::search(std::string palabra) {
 
-size_t qq = _palabras.size();//verifica la longitud del vector palabras
+size_t qq = _palabras.size();
 
 std::string def_palabra;
 
@@ -53,12 +53,10 @@ std::cout << "---------Enumerar palabras --------------" << "\n";
 
 for (int i = 0; i<qq; i++) {
 
-    std::string palabra_actual = _palabras[i];//nos va a servir para pasar el vector a la palabra actual
-    if (palabra_actual[0] == inicial) {
-
- 
-        _enumerar.push_back(palabra_actual);
- 
+    std::string pal_utilizar = _palabras[i];//nos va a servir para pasar el vector a la palabra actual
+    
+    if (pal_utilizar[0] == inicial) {
+        _enumerar.push_back(pal_utilizar);
     }
 }
 

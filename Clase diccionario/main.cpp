@@ -1,4 +1,4 @@
-#include "Lista.hh"
+#include "Diccionario.hh"
 #include <string>
 #include <iostream>
 
@@ -36,9 +36,9 @@ int main(int argc, char** argv) {
     */
 
     // Imprime "vehiculo motorizado de 4 ruedas"
-    d.search(std::string("casa"));
-    d.search(std::string("avion"));
-    d.enumerar('c');
+    d.search(std::string("carro"));
+    d.search(std::string("pizza"));
+    d.enumerar('a');
 
     /*
     Cree un metodo llamado "enumerar". Este debe aceptar un caracter y retornar un valor de tipo std::string*.
