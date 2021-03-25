@@ -7,6 +7,12 @@ Lista::Lista(int valor , Lista* resto): _valor(valor), _resto(resto){}
 
 Lista::Lista(int valor): _valor(valor), _resto(nullptr){}//nullptr se usa cuando no se tiene nada guardado en una variable.
 
+Lista::Lista(const Lista& otra): _valor(otra._valor), _resto(otra._resto){
+
+    std::cout << "se esta copiando\n";
+
+}
+
 Lista::~Lista(){
 
     delete _resto;
@@ -61,7 +67,7 @@ int Lista::largo() {
     return resultado;
 }
 
-int Lista::operator[](std::size_t ix){
+int& Lista::operator[](std::size_t ix){
 
     Lista* valor = this;
 
@@ -97,3 +103,4 @@ void Lista::byReference(int& valor, std::string& st){//& sirve para decir que si
     valor = 42;
     st[0] = 'A';
 }
+

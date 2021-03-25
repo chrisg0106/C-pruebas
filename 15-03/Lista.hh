@@ -8,6 +8,8 @@ class Lista {
     public:
     Lista(int valor, Lista* resto);
     Lista(int valor);
+    Lista(const Lista& otra);
+    
 
     ~Lista();
 
@@ -21,7 +23,7 @@ class Lista {
 
     int largo();
 
-    int operator[](std::size_t ix);
+    int& operator[](std::size_t ix);
 
     bool tryGet(std::size_t ix, int& resultado);
 

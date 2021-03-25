@@ -28,7 +28,7 @@ int main(int argc, char** argv){
     cout << "by value after " << byValue << ", " << sValue << "\n";
 
     int byReference = 0;
-    std::string sRef = "Hola mundo";
+    string sRef = "Hola mundo";
 
 
     cout << "by reference before " << byReference << ", " << sRef << "\n";
@@ -38,10 +38,22 @@ int main(int argc, char** argv){
     cout << "by reference after " << byReference << ", " << sRef << "\n";
 
     int resultado;
-    if(l.tryGet(2, resultado)){
+    if(l.tryGet(1, resultado)){
         cout << "El valor es: " << resultado << "\n";
     }
     else {
         cout << "El indice no existe \n";
     }
+    int x;
+    l.tryGet(2, x);
+    cout << "El valor de x es " << x << "\n";
+    cout << "El valor de resutado es " << resultado << "\n";
+
+ 
+    cout << "el indice 0 es: " << l[1] << "\n";
+    l[1] = 42; 
+
+    
+
+
 }
