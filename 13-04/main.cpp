@@ -22,10 +22,10 @@ int main(int argc, char** argv) {
                     terreno[i][j] = Terreno::Tierra;
                 }
             else if(ix % 3) {
-                    terreno[i][j] = Terreno::Calle;
+                    terreno[i][j] = Terreno::Agua;
                 }
             else {
-                    terreno[i][j] = Terreno::Agua;
+                    terreno[i][j] = Terreno::Calle;
                 }
         }
     }

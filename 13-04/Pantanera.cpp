@@ -6,5 +6,5 @@ bool Pantanera::puedeNavegarHacia(const int i, const int j) {
 
     return
         Vehiculo::puedeNavegarHacia(i, j)
-        && _mapa[i][j] == Terreno::Tierra || _mapa[i][j] == Terreno::Agua ;
+        && _mapa[i][j] == Terreno::Tierra || _mapa[i][j] == Terreno::Agua;
 }

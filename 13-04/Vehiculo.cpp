@@ -64,7 +64,7 @@ void Vehiculo::imprimir() {
                 std::cout << '-';
             }
             else {
-                std::cout << _mapa[i][j];
+                std::cout << "#";
             }
         }
 
